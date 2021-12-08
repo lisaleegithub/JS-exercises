@@ -62,8 +62,7 @@ function exercise1(num1) {
   // And above here
   // ------------------------------------------
   return answer1;
-}
-
+ }
 // EXERCISE 2.
 // Write an if/else conditional statement that if given a number will assign
 // a string value of:
@@ -79,13 +78,16 @@ function exercise2(num2) {
   // --------------------------------------------
   // Write your code for the exercise below here:
   // --------------------------------------------
-
+  if (num2 % 2 == 0) {
+    answer2 = num2 + " is even";
+  } else {
+    answer2 = num2 + " is odd";
+  }
   // --------------------------------------------
   // And above here
   // --------------------------------------------
   return answer2;
-}
-
+ }
 // EXERCISE 3.
 // Write an if/else if/else block such that if `num3` is positive, then
 // answer3 is assigned the string value of:
@@ -100,12 +102,18 @@ function exercise3(num3) {
   // --------------------------------------------
   // Write your code for the exercise below here:
   // --------------------------------------------
-
+  if (num3 > 0) {
+    answer3 = num3 + " is positive";
+  } else if (num3 < 0) {
+    answer3 = num3 + " is negative";
+  } else {
+    answer3 = num3 + " is zero";
+  }
   // --------------------------------------------
   // And above here
   // --------------------------------------------
   return answer3;
-}
+ }
 
 // EXERCISE 4.
 // Write an if/else statement such that if `varA` and `varB` are strings or
@@ -118,17 +126,23 @@ function exercise4(varA, varB) {
   // --------------------------------------------
   // Write your code for the exercise below here:
   // --------------------------------------------
-
+  if (varA === varB) {
+    answer4 = "varA and varB are equal";
+  } else {
+    answer4 = "varA and varB differ";
+  }
   // --------------------------------------------
   // And above here
   // --------------------------------------------
   return answer4;
-}
+ }
 
 // EXERCISE 5.
 // In exercise 4, what are some of the unexpected cases where `varA` and `varB`
 // seemed like they are equal, but would not pass the tests? In your analysis
 // consider other data types beside strings and variables.
+// If varA is 2 and varB is "2", they seem to be equal but they are not because varA is a number while varB is a string.
+// For other data types, I can think of boolean where true won't be the same as string "true" although they seem to be equal.
 
 // EXERCISE 6.
 // Here, assign the value of true to answer6 if:
@@ -139,12 +153,17 @@ function exercise6(varA, varB, varC) {
   // --------------------------------------------
   // Write your code for the exercise below here:
   // --------------------------------------------
-
+  // My assumption is that varA and varB would be an exact match (value and type)
+  if ((varA === varB) && ((varA !== varC) || (varB !== varC))) {
+    answer6 = true;
+  } else {
+    answer6 = false;
+  }
   // --------------------------------------------
   // And above here
   // --------------------------------------------
   return answer6;
-}
+ }
 
 // EXERCISE 7.
 // Use a switch conditional statement with case clauses such that if `num7` is
@@ -164,12 +183,27 @@ function exercise7(num7) {
   // --------------------------------------------
   // Write your code for the exercise below here:
   // --------------------------------------------
-
+  switch (num7) {
+    case num7 = 1:
+      answer7 = "You won!";
+      break;
+    case num7 = 7:
+      answer7 = "You are lucky!";
+      break;
+    case num7 = 101:
+      answer7 = "Welcome to coding 101!";
+      break;
+    case num7 = 1000000:
+      answer7 = "You are one in a million!";
+      break;
+    default:
+      answer7 = "Thanks for that!";
+  }
   // --------------------------------------------
   // And above here
   // --------------------------------------------
   return answer7;
-}
+ }
 
 // EXERCISE 8.
 // Using any conditional assign the value of true to answer8 if:
@@ -181,12 +215,16 @@ function exercise8(amount1, amount2, minimum, maximum) {
   // --------------------------------------------
   // Write your code for the exercise below here:
   // --------------------------------------------
-
+  if (((minimum < amount1) && (amount1 < maximum)) && ((minimum < amount2) && (amount2 < maximum))) {
+    answer8 = true;
+  } else {
+    answer8 = false;
+  }
   // --------------------------------------------
   // And above here
   // --------------------------------------------
   return answer8;
-}
+ }
 
 // EXERCISE 9.
 // In this exercise, if `item` is a number, follow the rules given in Exercise 7
@@ -200,12 +238,31 @@ function exercise9(item) {
   // --------------------------------------------
   // Write your code for the exercise below here:
   // --------------------------------------------
-
+  if (typeof item === "number") {
+    switch (item) {
+    case item = 1:
+      answer9 = "You won!";
+      break;
+    case item = 7:
+      answer9 = "You are lucky!";
+      break;
+    case item = 101:
+      answer9 = "Welcome to coding 101!";
+      break;
+    case item = 1000000:
+      answer9 = "You are one in a million!";
+      break;
+    default:
+      answer9 = "Thanks for that!";
+    }
+  } else {
+    answer9 = "Please send a number, that was a " + typeof item + "."
+  }
   // --------------------------------------------
   // And above here
   // --------------------------------------------
   return answer9;
-}
+ }
 
 // EXERCISE 10.
 // This question is a modified version of a classic programming question
@@ -222,16 +279,24 @@ function exercise10(num10) {
   // --------------------------------------------
   // Write your code for the exercise below here:
   // --------------------------------------------
-
+  if (num10 % 15 == 0) {
+    answer10 = "Fizz Buzz";
+  } else if (num10 % 3 == 0) {
+    answer10 = "Fizz";
+  } else if (num10 % 5 == 0) {
+    answer10 = "Buzz";
+  } else {
+    answer10 = num10;
+  }
   // --------------------------------------------
   // And above here
   // --------------------------------------------
   return answer10;
-}
+ }
 
 // Congrats, you made it to the end! You rock!
 // Did you find this easy or hard? If you used references, which ones helped you?
 // Please answer in a comment below.
-//
+// Relatively easy. I had to look up switch statement and it took me a couple of tries for comparison logical operator problems. I used w3schools.com and freecodecamp for references.
 
 // Email your file to us or commit your file to GitHub and email us a link.
